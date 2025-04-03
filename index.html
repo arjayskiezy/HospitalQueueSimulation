@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Queue Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Clinic Queue Simulation</h1>
+    <div id="display" class="box" aria-live="polite">Waiting for data...</div>
+
+    <div class="btn-container-input">
+      <button onclick="openModal()">Generate Queue</button>
+    </div>
+
+    <h2 class="manualcontrol">Manual Control</h2>
+    <div class="btn-container">
+      <button onclick="startSimulation()">Start Simulation</button>
+      <button id="toggleButton" onclick="toggleSimulation()">Pause</button>
+      <button onclick="skipStep()">Skip Step</button>
+      <button onclick="skipPatient()">Skip Patient</button>
+      <button onclick="stopSimulation()">Stop</button>
+      <button onclick="clearQueue()" class="cancel">Clear Queue</button>
+    </div>
+
+    <!-- MODAL -->
+    <div id="queueModal" class="modal">
+      <div class="modal-content">
+        <h2>Generate Queue</h2>
+        <div>
+          <button onclick="generateRandomQueue()">Generate Random Queue</button>
+        </div>
+        <div>
+          <h3>Or</h3>
+          <input
+            type="number"
+            id="patientCount"
+            min="1"
+            placeholder="Patients"
+          />
+          <div class="modal-buttons">
+            <button onclick="handleQueueGeneration()">Confirm</button>
+            <button onclick="closeModal()" class="cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="queueGenerator.js" defer></script>
+    <script src="manualControl.js" defer></script>
+  </body>
+</html>

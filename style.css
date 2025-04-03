@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url("background.jpg"); /* Add your image URL here */
+  background-size: cover; /* Make the image cover the whole page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  min-height: 100vh; /* Make sure the background covers at least the full viewport height */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.897
+  ); /* Set text color to white for better contrast */
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  color: #ffffffe1;
+}
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+#display {
+  font-size: 24px;
+  margin-top: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #f7f7f78c;
+  background-color: #9e9e9ebd;
+  display: inline-block;
+}
+.btn-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+button {
+  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: grab;
+  border: none;
+  background: #40454ba4;
+  color: white;
+  border-radius: 0px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button.cancel {
+  background: #ff00001f;
+  color: white;
+}
+button:hover {
+  color: #4ba2ff;
+  background: #ffffff;
+  transform: scale(1.1);
+}
+button.cancel:hover {
+  color: #b30000;
+  background: #ffffff;
+  transform: scale(1.1);
+}
+.btn-container-input {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.manualcontrol {
+  margin-top: 80px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(156, 156, 156, 0.5);
+  backdrop-filter: blur(5px); /* Apply blur to the background */
+}
+
+.modal-content {
+  background: rgba(58, 58, 58, 0.575);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  margin: 5% auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 32px;
+  border: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal button {
+  flex: 1;
+  margin: 5px;
+}
